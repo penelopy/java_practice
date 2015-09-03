@@ -80,11 +80,6 @@ class Maze {
 
   private void removeWalls(Cell a, Cell b) {
     
-    //    b
-    //  b a b
-    //    b
-    
-    
     if (a.row > b.row) {
       a.up = false;
       b.down = false;
@@ -135,11 +130,6 @@ class Maze {
   }
   
   public void render() {
-    // +--+--+--+
-    // |  |  |  |
-    // +--+--+--+
-    // |  |  |  |
-    // +--+--+--+
     
     char[][] canvas = new char[(rows * 2) + 1][(cols * 3) + 1]; 
     for (int r=0; r<canvas.length; r++) {
@@ -177,10 +167,6 @@ class Cell {
   }
   
   public void paint(char[][] canvas) {
-    // 
-    // +--+
-    // |  |
-    // +--+
     
     int x = col * 3; 
     int y = row * 2;
